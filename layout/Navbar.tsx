@@ -36,11 +36,6 @@ const Navbar = () => {
                         </li>
                     </a>
 
-                    <a href='/project'>
-                        <li className={`flex gap-x-4 py-2 px-4 rounded-md cursor-pointer hover:bg-inputBgLight dark:hover:bg-inputBgDark ${getSelected(['/project'])}`}>
-                            <h3>Projects</h3>
-                        </li>
-                    </a>
                 </ul>
                 <div />
             </div>
