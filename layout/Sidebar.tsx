@@ -23,15 +23,15 @@ const Sidebar = () => {
 
                 <div className='w-full'>
                     <ul className='flex flex-col gap-y-3'>
-                        <a href='/home'>
-                            <li className={`flex gap-x-4 py-4 px-4 rounded-md cursor-pointer hover:bg-inputBgLight dark:hover:bg-inputBgDark ${getSelected(['/home'])}`}>
+                        <a href='/'>
+                            <li className={`flex gap-x-4 py-4 px-4 rounded-md cursor-pointer hover:bg-inputBgLight dark:hover:bg-inputBgDark ${getSelected(['/'])}`}>
                                 <GiButterflyFlower size={28} />
                                 <h2>Garden</h2>
                             </li>
                         </a>
 
                         <a href='/blog'>
-                            <li className={`flex gap-x-4 py-2 px-4 rounded-md cursor-pointer hover:bg-inputBgLight dark:hover:bg-inputBgDark ${getSelected(['/home'])}`}>
+                            <li className={`flex gap-x-4 py-2 px-4 rounded-md cursor-pointer hover:bg-inputBgLight dark:hover:bg-inputBgDark ${getSelected(['/blog'])}`}>
                                 <IoIosLaptop size={28} />
                                 <h2>Blog</h2>
                             </li>

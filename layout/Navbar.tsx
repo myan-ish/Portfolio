@@ -20,18 +20,18 @@ const Navbar = () => {
     return (
         // Navbar that is on top of the page
 
-        <div className='sticky top-0 bg-white dark:bg-navBgDark flex w-full justify-end '>
-            <div className='flex gap-y-20'>
-
-                <ul className='flex gap-y-3'>
-                    <a href='/home'>
-                        <li className={`flex gap-x-4 py-2 px-4 rounded-md cursor-pointer hover:bg-inputBgLight dark:hover:bg-inputBgDark ${getSelected(['/home'])}`}>
+        <div className='bg-transparent w-screen'>
+            <div className='flex gap-y-20 w-full justify-between'>
+                <div />
+                <ul className='flex gap-y-3 mx-auto'>
+                    <a href='/'>
+                        <li className={`flex gap-x-4 py-2 px-4 rounded-md cursor-pointer hover:bg-inputBgLight dark:hover:bg-inputBgDark ${getSelected(['/'])}`}>
                             <h3>Garden</h3>
                         </li>
                     </a>
 
                     <a href='/blog'>
-                        <li className={`flex gap-x-4 py-2 px-4 rounded-md cursor-pointer hover:bg-inputBgLight dark:hover:bg-inputBgDark ${getSelected(['/home'])}`}>
+                        <li className={`flex gap-x-4 py-2 px-4 rounded-md cursor-pointer hover:bg-inputBgLight dark:hover:bg-inputBgDark ${getSelected(['/blog'])}`}>
                             <h3>Blog</h3>
                         </li>
                     </a>
@@ -41,8 +41,8 @@ const Navbar = () => {
                             <h3>Projects</h3>
                         </li>
                     </a>
-
                 </ul>
+                <div />
             </div>
         </div>
     )

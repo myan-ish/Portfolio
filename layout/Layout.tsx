@@ -25,7 +25,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div className='dark'>
       <Root className='bg-body dark:bg-font'>
 
-        <main className='max-w-[1920px] mx-auto gap-y-8 flex flex-col'>
+        <main className='max-w-[1920px] mx-auto gap-y-12 flex flex-col'>
           {!forbiddenPaths.some(path => router.pathname.includes(path)) && <Navbar />}
 
           {children}
