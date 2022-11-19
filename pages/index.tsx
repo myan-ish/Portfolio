@@ -7,43 +7,21 @@ import DynamicHead from '../layout/DynamicHead'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { DiGithubBadge, FaLinkedin } from '../components/icons'
+import { ProjectList } from '../@types/projectList';
+import axios from 'axios';
 
 const Home = () => {
-  const [projects, setProjects] = useState([
-    {
-      id: 1,
-      title: 'Project 1',
-      image: 'https://aboghanbari.com/static/a89fe8a4ad332d942da74da90f09fb8f/180f3/Flop.webp'
-    },
-    {
-      id: 2,
-      title: 'Project 2',
-      image: 'https://aboghanbari.com/static/51307f12012e74fb2b28b5c4456f6569/180f3/Lendscape.webp'
-    },
-    {
-      id: 3,
-      title: 'Project 3',
-      image: 'https://aboghanbari.com/static/3455079efad05303051f83892d0c2fe3/180f3/Tribe.webp'
-    },
-    {
-      id: 4,
-      title: 'Project 4',
-      image: 'https://aboghanbari.com/static/98c1b0b7e40d8f8807d62d9269b26f1c/180f3/Promot3.webp'
-    },
-    {
-      id: 5,
-      title: 'Project 5',
-      image: 'https://aboghanbari.com/static/f0f2dd77c93adb2468a85b43b49007a5/180f3/Baffy.webp'
-    },
-    {
-      id: 6,
-      title: 'Project 6',
-      image: 'https://aboghanbari.com/static/7882771b4b67e01db2255e01b71d6a5b/180f3/Crypto.webp'
-    },
-
-  ])
+  const [projects, setProjects] = useState<ProjectList>()
 
   useEffect(() => {
+    const getProject = async () => {
+      const { data } = await axios.get(
+        `http://127.0.0.1:8000/project_list/`
+      )
+      setProjects(data)
+    }
+    getProject()
+
     AOS.init();
     AOS.refresh();
   }, [])
@@ -90,12 +68,12 @@ const Home = () => {
           </div>
           <div className='bg-body dark:bg-font flex flex-row'>
             <div className='grid grid-cols-2 gap-8'>
-              {projects.map((project, index) => (
-                <Link href={`/project/${project.id}`} key={project.id}>
-                  <div className='flex flex-col gap-y-4' data-aos='fade-up' data-aos-duration={1000 + 200 * index}>
+              {projects?.projects.map((project) => (
+                <Link href={`${project.link}`} key={project.id}>
+                  <div className='flex flex-col gap-y-4' data-aos='fade-up' data-aos-duration={1000 + 200 * project.id}>
                     <div className='h-110 hover:scale-110 ease-in duration-300 rounded-md overflow-auto bg-transparent'>
                       <img
-                        src={project.image}
+                        src={project.cover_image}
                         alt={project.title}
                         className='object-cover w-full h-full '
                       />
