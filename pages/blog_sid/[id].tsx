@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import DynamicHead from '../../layout/DynamicHead'
 import { useRouter } from 'next/router'
 import axios from 'axios'
-import { Blog } from '../../types/blog'
+import { Blog } from '../../@types/blog'
 
 const Blog = () => {
     const router = useRouter()
