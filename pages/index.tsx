@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     const getProject = async () => {
       const { data } = await axios.get(
-        `http://127.0.0.1:8000/project_list/`
+        `https://portfolio-backend-dt6x.onrender.com/project_list/`
       )
       setProjects(data)
     }
