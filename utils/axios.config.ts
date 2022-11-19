@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: "your base url",
+    baseURL: "https://portfolio-backend-dt6x.onrender.com/",
     timeout: 6000,
     headers: {
         'Content-Type': 'application/json',
