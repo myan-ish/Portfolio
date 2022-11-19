@@ -46,7 +46,7 @@ const Home = () => {
                   Contact me
                 </button>
                 <div className='rounded-full bg-white dark:bg-gray-800 flex flex-row gap-x-4 p-3'>
-                  <a href='https://github.com/myan-ish/' target={"_blank"}>
+                  <a href='https://github.com/myan-ish/'>
                     <DiGithubBadge size={24} />
                   </a>
                 </div>
@@ -92,12 +92,12 @@ const Home = () => {
                 Contact me
               </button>
               <div className='rounded-full bg-white dark:bg-gray-800 flex flex-row gap-x-4 p-3'>
-                <a href='https://github.com/myan-ish/' target={"_blank"}>
+                <a href='https://github.com/myan-ish/'>
                   <DiGithubBadge size={24} />
                 </a>
               </div>
               <div className='rounded-full bg-white dark:bg-gray-800 flex flex-row gap-x-4 p-3'>
-                <a href='https://www.linkedin.com/in/manish-kunwar/' target={"_blank"}>
+                <a href='https://www.linkedin.com/in/manish-kunwar/'>
                   <FaLinkedin size={24} />
                 </a>
               </div>
