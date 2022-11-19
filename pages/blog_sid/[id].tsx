@@ -12,7 +12,7 @@ const Blog = () => {
     useEffect(() => {
         const getBlog = async () => {
             const { data } = await axios.get(
-                `http://127.0.0.1:8000/get_blog/${id}`
+                `https://portfolio-backend-dt6x.onrender.com/get_blog/${id}`
             )
             setBlog(data)
         }
