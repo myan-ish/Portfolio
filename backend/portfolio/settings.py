@@ -27,8 +27,6 @@ SECRET_KEY = "django-insecure-f-59w!dcd#c&3dqi8tzygegqysp@dxep_&yne@7#yz95jltj+5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
-
 
 # Application definition
 
@@ -57,6 +55,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
+ALLOWED_HOSTS = ["*"]
 
 ROOT_URLCONF = "portfolio.urls"
 
