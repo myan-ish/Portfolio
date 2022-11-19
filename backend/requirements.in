@@ -1,0 +1,13 @@
+django
+djangorestframework
+django-filter
+drf-spectacular
+djangorestframework-simplejwt
+drf-writable-nested
+pillow
+django-safedelete
+cryptography
+gunicorn
+django-cors-headers
+django-ckeditor
+django-rich-logging

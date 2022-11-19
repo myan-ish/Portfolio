@@ -36,7 +36,17 @@
     li {
         @apply text-sm font-normal;
     }
+    blockquote{
+        @apply  dark:bg-gray-800 p-1 rounded-sm;
+    }
     
+    code{
+        @apply p-1 rounded-sm;
+    }
+
+    :link{
+        @apply text-green-500 hover:underline;
+    }
     
     /* Input */
     input {

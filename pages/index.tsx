@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import type { NextPage } from 'next'
+import { useRouter } from 'next/router';
+
 import DynamicHead from '../layout/DynamicHead'
 
-const Home = () => {
+const Home: NextPage = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/home');
+  }, [])
+
   return (
     <>
       <DynamicHead
