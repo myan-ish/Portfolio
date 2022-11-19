@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Local apps
     "blog",
+    "project",
     # Third party apps
     "ckeditor",
 ]
