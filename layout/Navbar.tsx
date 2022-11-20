@@ -9,7 +9,7 @@ const Navbar = () => {
 
     const router = useRouter();
     const getSelected = (path: string[]) => {
-        if (path.some(p => router.pathname.includes(p))) {
+        if (path.some(p => router.pathname == p)) {
             return 'bg-inputBgLight dark:bg-inputBgDark opacity-100'
         }
         else {
