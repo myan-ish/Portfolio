@@ -13,6 +13,11 @@ import axios from 'axios';
 const Home = () => {
   const [projects, setProjects] = useState<ProjectList>()
 
+  const openEmail = () => {
+    // open email
+    window.open('mailto:ranaxmond@gmail.com', "_self")
+  }
+
   useEffect(() => {
     const getProject = async () => {
       const { data } = await axios.get(
@@ -40,9 +45,8 @@ const Home = () => {
             <div className='h-96 rounded-md overflow-auto bg-gradient-to-r from-indigo-500 w-7/12 flex flex-col gap-y-12 p-4'>
               <h1 >Hello, I am Manish, a backend developer with 1 year of experience.</h1>
               <p>In my free time, I solve issues on Github, help newbies on discord and learning is always fun.</p>
-              {/* Contact me row with linkedin and github link icons */}
               <div className='flex flex-row gap-x-4'>
-                <button className='bg-white dark:bg-gray-800 rounded-full px-5 py-3'>
+                <button className='bg-white dark:bg-gray-800 rounded-full px-5 py-3' onClick={openEmail}>
                   Contact me
                 </button>
                 <div className='rounded-full bg-white dark:bg-gray-800 flex flex-row gap-x-4 p-3'>
@@ -88,7 +92,7 @@ const Home = () => {
             <p>Feel free to reach out for collaborations</p>
             <p>Ranaxmond@gmail.com</p>
             <div className='flex flex-row gap-x-4 mt-12'>
-              <button className='bg-white dark:bg-gray-800 rounded-full px-5 py-3'>
+              <button className='bg-white dark:bg-gray-800 rounded-full px-5 py-3' onClick={openEmail}>
                 Contact me
               </button>
               <div className='rounded-full bg-white dark:bg-gray-800 flex flex-row gap-x-4 p-3'>
