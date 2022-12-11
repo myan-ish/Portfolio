@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 def check_profanity_or_hate_speech(text):
