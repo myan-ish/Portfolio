@@ -1,8 +1,6 @@
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
-import styled from 'styled-components'
 
-import { GiButterflyFlower, IoIosLaptop, FaProjectDiagram } from '../components/icons'
 
 
 const Navbar = () => {
@@ -33,6 +31,12 @@ const Navbar = () => {
                     <a href='/blog'>
                         <li className={`flex gap-x-4 py-2 px-4 rounded-md cursor-pointer hover:bg-inputBgLight dark:hover:bg-inputBgDark ${getSelected(['/blog'])}`}>
                             <h3>Blog</h3>
+                        </li>
+                    </a>
+                    <a href='/AI'>
+
+                        <li className={`flex gap-x-4 py-2 px-4 rounded-md cursor-pointer hover:bg-inputBgLight dark:hover:bg-inputBgDark ${getSelected(['/AI'])}`}>
+                            <h3>AI</h3>
                         </li>
                     </a>
 
