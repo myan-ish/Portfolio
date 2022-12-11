@@ -10,7 +10,7 @@ const AI = () => {
         const input = document.getElementById("input") as HTMLInputElement
         const output = document.getElementById("output") as HTMLParagraphElement
         output.innerHTML = "Loading..."
-        await axios.post('http://localhost:8000/api/profanity_hate_speech_check/', {
+        await axios.post('https://portfolio-backend-dt6x.onrender.com/api/profanity_hate_speech_check/', {
             text: input.value
         }).then((response) => {
             if (response.data.is_profanity_or_hate_speech) {
