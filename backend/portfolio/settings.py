@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # Local apps
     "blog",
     "project",
+    "general",
     # Third party apps
     "ckeditor",
 ]
