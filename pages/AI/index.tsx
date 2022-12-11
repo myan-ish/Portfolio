@@ -13,7 +13,7 @@ const AI = () => {
         await axios.post('https://portfolio-backend-dt6x.onrender.com/api/profanity_hate_speech_check/', {
             text: input.value
         }).then((response) => {
-            if (response.data.is_profanity_or_hate_speech) {
+            if (response.data.is_profanity_or_hate_speech == true) {
                 output.innerHTML = "The string contains profanity or hate speech."
             }
             else {
