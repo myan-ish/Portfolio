@@ -3,7 +3,7 @@ from general.models import OpenApiKey
 
 
 def check_profanity_or_hate_speech(text):
-    open.api_key = OpenApiKey.objects.first().key
+    openai.api_key = OpenApiKey.objects.first().key
     completion = openai.Completion.create(
         engine="text-babbage-001",
         prompt=f"Q: Is the following sentence hate speech or contains profanity?(Yes/No) {text}",
