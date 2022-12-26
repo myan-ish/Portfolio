@@ -13,7 +13,7 @@ def project_list(request):
                     "id": project.id,
                     "title": project.title,
                     "description": project.description,
-                    "cover_image": f"https://portfolio-backend-dt6x.onrender.com{project.cover_image.url}",
+                    "cover_image": f"http://autumn000.pythonanywhere.com{project.cover_image.url}",
                     # "gallery": [
                     #     {
                     #         "id": image.id,
