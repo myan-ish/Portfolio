@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "general",
     # Third party apps
     "ckeditor",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -56,8 +57,12 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
-ALLOWED_HOSTS = ["*"]
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True 
+ALLOWED_HOSTS = ['*']
+
 
 ROOT_URLCONF = "portfolio.urls"
 
