@@ -16,7 +16,7 @@ class Project(models.Model):
     cover_image = models.ImageField(upload_to="project_images+{self.name}/")
     gallery = models.ManyToManyField("Gallery", related_name="projects", blank=True)
     link = models.URLField(blank=True, null=True)
-
+    
     def __str__(self):
         return self.title
 

@@ -10,5 +10,4 @@ cryptography
 gunicorn
 django-cors-headers
 django-ckeditor
-django-rich-logging
 openai

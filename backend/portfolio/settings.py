@@ -209,18 +209,3 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-
-# ------------------------------LOGGER SETTINGS--------------------------------------------------#
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "handlers": {
-        "django_rich_logging": {
-            "class": "django_rich_logging.logging.DjangoRequestHandler",
-        },
-    },
-    "loggers": {
-        "django.server": {"handlers": ["django_rich_logging"]},
-        "django.request": {"level": "CRITICAL"},
-    },
-}
