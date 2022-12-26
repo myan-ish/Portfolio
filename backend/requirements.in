@@ -11,3 +11,5 @@ gunicorn
 django-cors-headers
 django-ckeditor
 openai
+openai
+whitenoise
