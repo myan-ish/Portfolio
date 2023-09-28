@@ -10,6 +10,7 @@ import { DiGithubBadge, FaLinkedin } from "../components/icons";
 import { ProjectList } from "../@types/projectList";
 import axios from "axios";
 import axiosInstance from "../utils/axios.config";
+import ProjectDescription from "../features/ProjectDescription";
 
 const Home = () => {
   const [projects, setProjects] = useState<ProjectList>();
@@ -25,7 +26,10 @@ const Home = () => {
       setProjects(data);
     };
     getProject();
+  }, []);
 
+  // this nothing, just don't keep everything in same useEffect
+  useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
@@ -33,20 +37,22 @@ const Home = () => {
   return (
     <>
       <DynamicHead title="Home" description="This is the home page" />
-      <div className="w-full flex flex-row">
+      <div className="w-full flex flex-wrap">
         <div className="w-1/6"></div>
         <div className="flex-1 min-h-screen flex flex-col gap-y-12 px-8 py-12">
           <div className="bg-body dark:bg-font flex flex-row gap-y-3 gap-x-6">
-            <div className="h-96 rounded-md overflow-auto bg-gradient-to-r from-indigo-500 w-7/12 flex flex-col gap-y-12 p-4">
-              <h1>
-                Hello, I am Manish, a backend developer with 1 year of
-                experience.
-              </h1>
-              <p>
-                In my free time, I solve issues on Github, help newbies on
-                discord and learning is always fun.
-              </p>
-              <div className="flex flex-row gap-x-4">
+            <div className="h-96 rounded-md overflow-auto bg-gradient-to-r from-indigo-500 w-7/12 flex flex-col gap-y-12 p-4 ">
+              <div className="flex flex-col">
+                <h1>
+                  Hello, I am Manish, a backend developer with 2 years of
+                  experience.
+                </h1>        
+                <p>
+                  In my free time, I solve issues on Github, help newbies on
+                  discord and learning is always fun.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-x-4">
                 <button
                   className="bg-white dark:bg-gray-800 rounded-full px-5 py-3"
                   onClick={openEmail}
