@@ -13,3 +13,4 @@ django-ckeditor
 openai
 openai
 whitenoise
+django-htmx
