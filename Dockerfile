@@ -12,5 +12,5 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-RUN export DJANGO_SETTINGS_MODULE=core.settings
-CMD gunicorn --bind=0.0.0.0:8000 --timeout 600 core.wsgi
+RUN export DJANGO_SETTINGS_MODULE=portfolio.settings
+CMD gunicorn --bind=0.0.0.0:8000 --timeout 600 portfolio.wsgi
