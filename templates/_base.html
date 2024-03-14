@@ -1,0 +1,62 @@
+{% load django_htmx %} {% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Autumn Garden</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+
+    <!-- An example of how we can configure htmx -->
+    <!-- https://htmx.org/docs/#config -->
+    <meta name="htmx-config" content='{"historyCacheSize": 15}' />
+
+    <script src="{% static 'htmx.min.js' %}" defer></script>
+    <script src="{% static 'ext/debug.js' %}" defer></script>
+    <script src="{% static 'ext/event-header.js' %}" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="{% static 'tailwind.config.js'%}"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body hx-ext="debug, event-header" class="dark bg-[#151a27]">
+      <div class='bg-transparent w-screen text-white font-light'>
+        <div class='flex gap-y-20 w-full justify-between'>
+            <ul class='flex gap-y-3 mx-auto'>
+                <a href='/'>
+                    <li class="flex gap-x-4 py-2 px-4 rounded-md cursor-pointer hover:bg-inputBgLight dark:hover:bg-inputBgDark">
+                        <h3>Garden</h3>
+                    </li>
+                </a>
+
+                <a href='/blog'>
+                    <li class="flex gap-x-4 py-2 px-4 rounded-md cursor-pointer hover:bg-inputBgLight dark:hover:bg-inputBgDark">
+                        <h3>Blog</h3>
+                    </li>
+                </a>
+                <a href='/AI'>
+
+                    <li class="flex gap-x-4 py-2 px-4 rounded-md cursor-pointer hover:bg-inputBgLight dark:hover:bg-inputBgDark">
+                        <h3>AI</h3>
+                    </li>
+                </a>
+
+            </ul>
+            <div />
+        </div>
+    </div>
+    <main
+      id="main"
+      class="max-w-[1920px] mx-auto gap-y-12 flex flex-co text-[#f4f7ed]"
+    >
+      {% block main %}{% endblock %}
+    </main>
+    <footer>
+      <hr />
+    </footer>
+    {% django_htmx_script %}
+  </body>
+</html>
